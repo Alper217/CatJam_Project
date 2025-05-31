@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 14064303}
   - component: {fileID: 14064302}
   - component: {fileID: 14064301}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (19)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 27426964}
   - component: {fileID: 27426963}
   - component: {fileID: 27426962}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (50)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 71754055}
   - component: {fileID: 71754054}
   - component: {fileID: 71754053}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (72)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -708,7 +708,7 @@ GameObject:
   - component: {fileID: 114943397}
   - component: {fileID: 114943396}
   - component: {fileID: 114943395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (17)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 119828850}
   - component: {fileID: 119828849}
   - component: {fileID: 119828848}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (9)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ GameObject:
   - component: {fileID: 154239154}
   - component: {fileID: 154239153}
   - component: {fileID: 154239152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (74)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -1278,7 +1278,7 @@ GameObject:
   - component: {fileID: 196847088}
   - component: {fileID: 196847087}
   - component: {fileID: 196847086}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (64)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -1468,7 +1468,7 @@ GameObject:
   - component: {fileID: 201814025}
   - component: {fileID: 201814024}
   - component: {fileID: 201814023}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (33)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -1658,7 +1658,7 @@ GameObject:
   - component: {fileID: 259818452}
   - component: {fileID: 259818451}
   - component: {fileID: 259818450}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (51)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -1848,7 +1848,7 @@ GameObject:
   - component: {fileID: 260420337}
   - component: {fileID: 260420336}
   - component: {fileID: 260420335}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (52)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -2038,7 +2038,7 @@ GameObject:
   - component: {fileID: 263963920}
   - component: {fileID: 263963919}
   - component: {fileID: 263963918}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (63)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -2228,7 +2228,7 @@ GameObject:
   - component: {fileID: 271533022}
   - component: {fileID: 271533021}
   - component: {fileID: 271533020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (60)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -2418,7 +2418,7 @@ GameObject:
   - component: {fileID: 298991506}
   - component: {fileID: 298991505}
   - component: {fileID: 298991504}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (67)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -2608,7 +2608,7 @@ GameObject:
   - component: {fileID: 309575667}
   - component: {fileID: 309575666}
   - component: {fileID: 309575665}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (41)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -2798,7 +2798,7 @@ GameObject:
   - component: {fileID: 325886749}
   - component: {fileID: 325886748}
   - component: {fileID: 325886747}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (30)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -2988,7 +2988,7 @@ GameObject:
   - component: {fileID: 330039706}
   - component: {fileID: 330039705}
   - component: {fileID: 330039704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (14)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -3315,7 +3315,7 @@ GameObject:
   - component: {fileID: 341789830}
   - component: {fileID: 341789829}
   - component: {fileID: 341789828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (79)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -3841,7 +3841,7 @@ GameObject:
   - component: {fileID: 429045084}
   - component: {fileID: 429045083}
   - component: {fileID: 429045082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (45)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -4146,6 +4146,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1239637940}
   - {fileID: 1102233274}
   - {fileID: 330585546}
   m_Father: {fileID: 0}
@@ -4424,7 +4425,7 @@ GameObject:
   - component: {fileID: 475847513}
   - component: {fileID: 475847512}
   - component: {fileID: 475847511}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (77)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -4614,7 +4615,7 @@ GameObject:
   - component: {fileID: 481275952}
   - component: {fileID: 481275951}
   - component: {fileID: 481275950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (1)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -4801,7 +4802,7 @@ GameObject:
   - component: {fileID: 491925013}
   - component: {fileID: 491925012}
   - component: {fileID: 491925011}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4909,7 +4910,7 @@ GameObject:
   - component: {fileID: 508711373}
   - component: {fileID: 508711372}
   - component: {fileID: 508711371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (36)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -5099,7 +5100,7 @@ GameObject:
   - component: {fileID: 571232933}
   - component: {fileID: 571232932}
   - component: {fileID: 571232931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (15)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -5499,7 +5500,7 @@ GameObject:
   - component: {fileID: 586848397}
   - component: {fileID: 586848396}
   - component: {fileID: 586848395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (46)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -5689,7 +5690,7 @@ GameObject:
   - component: {fileID: 588092215}
   - component: {fileID: 588092214}
   - component: {fileID: 588092213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -5721,7 +5722,7 @@ MonoBehaviour:
   rotationSpeed: 60
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   npcLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5879,7 +5880,7 @@ GameObject:
   - component: {fileID: 590207976}
   - component: {fileID: 590207975}
   - component: {fileID: 590207974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (5)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -6069,7 +6070,7 @@ GameObject:
   - component: {fileID: 593675520}
   - component: {fileID: 593675519}
   - component: {fileID: 593675518}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (57)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -6259,7 +6260,7 @@ GameObject:
   - component: {fileID: 625175585}
   - component: {fileID: 625175584}
   - component: {fileID: 625175583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (2)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -6449,7 +6450,7 @@ GameObject:
   - component: {fileID: 684012524}
   - component: {fileID: 684012523}
   - component: {fileID: 684012522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (35)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -6639,7 +6640,7 @@ GameObject:
   - component: {fileID: 693962554}
   - component: {fileID: 693962553}
   - component: {fileID: 693962552}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (81)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -6829,7 +6830,7 @@ GameObject:
   - component: {fileID: 715894275}
   - component: {fileID: 715894274}
   - component: {fileID: 715894273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (59)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -7019,7 +7020,7 @@ GameObject:
   - component: {fileID: 719698777}
   - component: {fileID: 719698776}
   - component: {fileID: 719698775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (27)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -7209,7 +7210,7 @@ GameObject:
   - component: {fileID: 758229942}
   - component: {fileID: 758229941}
   - component: {fileID: 758229940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (23)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -7399,7 +7400,7 @@ GameObject:
   - component: {fileID: 765626292}
   - component: {fileID: 765626291}
   - component: {fileID: 765626290}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (69)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -7589,7 +7590,7 @@ GameObject:
   - component: {fileID: 766346365}
   - component: {fileID: 766346364}
   - component: {fileID: 766346363}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (3)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -7779,7 +7780,7 @@ GameObject:
   - component: {fileID: 798591797}
   - component: {fileID: 798591796}
   - component: {fileID: 798591795}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (18)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -7969,7 +7970,7 @@ GameObject:
   - component: {fileID: 805110350}
   - component: {fileID: 805110349}
   - component: {fileID: 805110348}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (44)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -8208,7 +8209,7 @@ GameObject:
   - component: {fileID: 848888898}
   - component: {fileID: 848888897}
   - component: {fileID: 848888896}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (20)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -8398,7 +8399,7 @@ GameObject:
   - component: {fileID: 857258296}
   - component: {fileID: 857258295}
   - component: {fileID: 857258294}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (80)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -8693,7 +8694,7 @@ GameObject:
   - component: {fileID: 921934040}
   - component: {fileID: 921934039}
   - component: {fileID: 921934038}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (11)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -8883,7 +8884,7 @@ GameObject:
   - component: {fileID: 937891604}
   - component: {fileID: 937891603}
   - component: {fileID: 937891602}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (21)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -9073,7 +9074,7 @@ GameObject:
   - component: {fileID: 973580292}
   - component: {fileID: 973580291}
   - component: {fileID: 973580290}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (28)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -9263,7 +9264,7 @@ GameObject:
   - component: {fileID: 976550325}
   - component: {fileID: 976550324}
   - component: {fileID: 976550323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (71)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -9453,7 +9454,7 @@ GameObject:
   - component: {fileID: 1021203495}
   - component: {fileID: 1021203494}
   - component: {fileID: 1021203493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (34)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -9748,7 +9749,7 @@ GameObject:
   - component: {fileID: 1054486063}
   - component: {fileID: 1054486062}
   - component: {fileID: 1054486061}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (16)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -9973,7 +9974,7 @@ GameObject:
   - component: {fileID: 1078322381}
   - component: {fileID: 1078322380}
   - component: {fileID: 1078322379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (37)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -10163,7 +10164,7 @@ GameObject:
   - component: {fileID: 1081082136}
   - component: {fileID: 1081082135}
   - component: {fileID: 1081082134}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (53)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -10353,7 +10354,7 @@ GameObject:
   - component: {fileID: 1083181857}
   - component: {fileID: 1083181856}
   - component: {fileID: 1083181855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (62)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -10543,7 +10544,7 @@ GameObject:
   - component: {fileID: 1084910023}
   - component: {fileID: 1084910022}
   - component: {fileID: 1084910021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (43)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -10733,7 +10734,7 @@ GameObject:
   - component: {fileID: 1098147117}
   - component: {fileID: 1098147116}
   - component: {fileID: 1098147115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (29)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -11028,7 +11029,7 @@ GameObject:
   - component: {fileID: 1106333803}
   - component: {fileID: 1106333802}
   - component: {fileID: 1106333801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (4)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -11218,7 +11219,7 @@ GameObject:
   - component: {fileID: 1133773072}
   - component: {fileID: 1133773071}
   - component: {fileID: 1133773070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (61)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -11405,7 +11406,7 @@ GameObject:
   - component: {fileID: 1135944103}
   - component: {fileID: 1135944102}
   - component: {fileID: 1135944101}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11618,7 +11619,7 @@ GameObject:
   - component: {fileID: 1222530726}
   - component: {fileID: 1222530725}
   - component: {fileID: 1222530724}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (7)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -11793,6 +11794,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420022220}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1239637939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1239637940}
+  - component: {fileID: 1239637941}
+  m_Layer: 0
+  m_Name: StressManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1239637940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239637939}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.983717, z: 0, w: 0.17972437}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 433103504}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1239637941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239637939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6709b33842d6c43b81e429d811f65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stressLevel: 0
+  maxDistance: 1.5
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  buttonPanel: {fileID: 0}
 --- !u!1 &1265036760
 GameObject:
   m_ObjectHideFlags: 0
@@ -11808,7 +11859,7 @@ GameObject:
   - component: {fileID: 1265036763}
   - component: {fileID: 1265036762}
   - component: {fileID: 1265036761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (26)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -11998,7 +12049,7 @@ GameObject:
   - component: {fileID: 1293268402}
   - component: {fileID: 1293268401}
   - component: {fileID: 1293268400}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (48)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -12188,7 +12239,7 @@ GameObject:
   - component: {fileID: 1337811621}
   - component: {fileID: 1337811620}
   - component: {fileID: 1337811619}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (10)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -12378,7 +12429,7 @@ GameObject:
   - component: {fileID: 1409280420}
   - component: {fileID: 1409280419}
   - component: {fileID: 1409280418}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (40)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -12568,7 +12619,7 @@ GameObject:
   - component: {fileID: 1413992766}
   - component: {fileID: 1413992765}
   - component: {fileID: 1413992764}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (38)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -12758,7 +12809,7 @@ GameObject:
   - component: {fileID: 1438902046}
   - component: {fileID: 1438902045}
   - component: {fileID: 1438902044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (22)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -12948,7 +12999,7 @@ GameObject:
   - component: {fileID: 1448277894}
   - component: {fileID: 1448277893}
   - component: {fileID: 1448277892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (13)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -13135,7 +13186,7 @@ GameObject:
   - component: {fileID: 1453110590}
   - component: {fileID: 1453110589}
   - component: {fileID: 1453110588}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13243,7 +13294,7 @@ GameObject:
   - component: {fileID: 1463776402}
   - component: {fileID: 1463776401}
   - component: {fileID: 1463776400}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (56)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -13433,7 +13484,7 @@ GameObject:
   - component: {fileID: 1509527326}
   - component: {fileID: 1509527325}
   - component: {fileID: 1509527324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (68)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -13623,7 +13674,7 @@ GameObject:
   - component: {fileID: 1550353563}
   - component: {fileID: 1550353562}
   - component: {fileID: 1550353561}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (55)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -13918,7 +13969,7 @@ GameObject:
   - component: {fileID: 1616841642}
   - component: {fileID: 1616841641}
   - component: {fileID: 1616841640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (73)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -14108,7 +14159,7 @@ GameObject:
   - component: {fileID: 1660459252}
   - component: {fileID: 1660459251}
   - component: {fileID: 1660459250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (65)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -14298,7 +14349,7 @@ GameObject:
   - component: {fileID: 1665369319}
   - component: {fileID: 1665369318}
   - component: {fileID: 1665369317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (24)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -14488,7 +14539,7 @@ GameObject:
   - component: {fileID: 1671207586}
   - component: {fileID: 1671207585}
   - component: {fileID: 1671207584}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (42)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -14678,7 +14729,7 @@ GameObject:
   - component: {fileID: 1705143987}
   - component: {fileID: 1705143986}
   - component: {fileID: 1705143985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (49)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -14868,7 +14919,7 @@ GameObject:
   - component: {fileID: 1710146377}
   - component: {fileID: 1710146376}
   - component: {fileID: 1710146375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (78)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -15058,7 +15109,7 @@ GameObject:
   - component: {fileID: 1713339790}
   - component: {fileID: 1713339789}
   - component: {fileID: 1713339788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (75)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -15353,7 +15404,7 @@ GameObject:
   - component: {fileID: 1803858463}
   - component: {fileID: 1803858462}
   - component: {fileID: 1803858461}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (12)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -15543,7 +15594,7 @@ GameObject:
   - component: {fileID: 1835564545}
   - component: {fileID: 1835564544}
   - component: {fileID: 1835564543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (32)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -15881,7 +15932,7 @@ GameObject:
   - component: {fileID: 1909404661}
   - component: {fileID: 1909404660}
   - component: {fileID: 1909404659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (31)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -16071,7 +16122,7 @@ GameObject:
   - component: {fileID: 1916630262}
   - component: {fileID: 1916630261}
   - component: {fileID: 1916630260}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (66)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -16261,7 +16312,7 @@ GameObject:
   - component: {fileID: 1922361569}
   - component: {fileID: 1922361568}
   - component: {fileID: 1922361567}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (76)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -16451,7 +16502,7 @@ GameObject:
   - component: {fileID: 1943053501}
   - component: {fileID: 1943053500}
   - component: {fileID: 1943053499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (54)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -16638,7 +16689,7 @@ GameObject:
   - component: {fileID: 1943771182}
   - component: {fileID: 1943771181}
   - component: {fileID: 1943771180}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16746,7 +16797,7 @@ GameObject:
   - component: {fileID: 1977828075}
   - component: {fileID: 1977828074}
   - component: {fileID: 1977828073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (25)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -16936,7 +16987,7 @@ GameObject:
   - component: {fileID: 1990094071}
   - component: {fileID: 1990094070}
   - component: {fileID: 1990094069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (6)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -17126,7 +17177,7 @@ GameObject:
   - component: {fileID: 1998624719}
   - component: {fileID: 1998624718}
   - component: {fileID: 1998624717}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (8)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -17316,7 +17367,7 @@ GameObject:
   - component: {fileID: 2016004168}
   - component: {fileID: 2016004167}
   - component: {fileID: 2016004166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (58)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -17611,7 +17662,7 @@ GameObject:
   - component: {fileID: 2028324319}
   - component: {fileID: 2028324318}
   - component: {fileID: 2028324317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (39)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -17801,7 +17852,7 @@ GameObject:
   - component: {fileID: 2029017513}
   - component: {fileID: 2029017512}
   - component: {fileID: 2029017511}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (47)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -18096,7 +18147,7 @@ GameObject:
   - component: {fileID: 2071722381}
   - component: {fileID: 2071722380}
   - component: {fileID: 2071722379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC (70)
   m_TagString: NPC
   m_Icon: {fileID: 0}

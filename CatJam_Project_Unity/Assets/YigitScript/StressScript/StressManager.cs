@@ -5,18 +5,26 @@ using UnityEngine.UI;
 
 public class StressManager : MonoBehaviour
 {
+    public static StressManager instance;
     public float stressLevel = 0f;
     [SerializeField] private float stressIncreaseRate = 1f;
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private LayerMask npcLayer;
-    [SerializeField] private GameObject buttonPanel;
+    [SerializeField] private GameObject interactPanel;
+    [SerializeField] private GameObject textPanel;
     public bool isOpen = true;
+    private AudioSource audioSource;
 
     private List<NPCHighlight> currentHighlightedNPCs = new List<NPCHighlight>();
-
+    private void Awake()
+    {
+        StressManager.instance = this;
+        audioSource = GetComponent<AudioSource>();
+    }
     void Start()
     {
-        buttonPanel.SetActive(false);
+        interactPanel.SetActive(false);
+        textPanel.SetActive(false);
     }
 
     private void OnDrawGizmos()
@@ -81,17 +89,17 @@ public class StressManager : MonoBehaviour
             // Panel kontrolü
             if (npcFound)
             {
-                if (!buttonPanel.activeInHierarchy)
+                if (!interactPanel.activeInHierarchy)
                 {
-                    buttonPanel.SetActive(true);
+                    interactPanel.SetActive(true);
                     Debug.Log("NPC detected - Panel açýldý");
                 }
             }
             else
             {
-                if (buttonPanel.activeInHierarchy)
+                if (interactPanel.activeInHierarchy)
                 {
-                    buttonPanel.SetActive(false);
+                    interactPanel.SetActive(false);
                     Debug.Log("No NPC detected - Panel kapatýldý");
                 }
             }
@@ -109,16 +117,32 @@ public class StressManager : MonoBehaviour
             currentHighlightedNPCs.Clear();
         }
     }
-
-    public void IncreaseStress()
-    { 
-        if (Input.GetKeyDown(KeyCode.E) && buttonPanel.activeInHierarchy)
-        {
-            stressLevel = stressLevel + stressIncreaseRate;
-            buttonPanel.SetActive(false);
-        }     
+    IEnumerator ResumeNPCAfterDelay(NPCAI npcAI, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        npcAI.ResumeNPC();
     }
+    public void IncreaseStress()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && interactPanel.activeInHierarchy)
+        {
+            stressLevel += stressIncreaseRate;
 
+            if (currentHighlightedNPCs.Count > 0 && currentHighlightedNPCs[0] != null)
+            {
+                NPCAI npcAI = currentHighlightedNPCs[0].GetComponent<NPCAI>();
+                if (npcAI != null)
+                {
+                    npcAI.StopNPC(); // Hemen durdur
+                    StartCoroutine(ResumeNPCAfterDelay(npcAI, 3f)); // 3 saniye sonra tekrar baþlasýn
+                }
+            }
+
+            interactPanel.SetActive(false);
+            audioSource.Play();
+            StartCoroutine(HideTextPanel());
+        }
+    }
     void OnDisable()
     {
         // Script devre dýþý kaldýðýnda highlight'larý temizle
@@ -130,5 +154,12 @@ public class StressManager : MonoBehaviour
             }
         }
         currentHighlightedNPCs.Clear();
+    }
+
+    IEnumerator HideTextPanel()
+    {
+        textPanel.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        textPanel.SetActive(false);
     }
 }

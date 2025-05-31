@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - Shelf
+  - restart
   layers:
   - Default
   - TransparentFX

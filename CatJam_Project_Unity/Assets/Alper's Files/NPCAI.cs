@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Animations;
 
 public class NPCAI : MonoBehaviour
 {
@@ -18,7 +17,6 @@ public class NPCAI : MonoBehaviour
     private Vector3 startPosition;
     private Animator animator;
     private bool wasMoving = false;
-    [SerializeField] Transform characterTransform;
 
     private void Awake()
     {
@@ -109,13 +107,6 @@ public class NPCAI : MonoBehaviour
             agent.isStopped = true;
             UpdateAnimation(false); // Idle animasyon
             Debug.Log($"{gameObject.name} durduruldu!");
-            if (characterTransform != null)
-            {
-                Vector3 direction = (characterTransform.position - transform.position).normalized;
-                direction.y = 0; // Yukarý aþaðý bakmasýný istemiyorsak
-                if (direction != Vector3.zero)
-                    transform.rotation = Quaternion.LookRotation(direction);
-            }
         }
         else
         {
@@ -159,7 +150,7 @@ public class NPCAI : MonoBehaviour
 
     public bool IsStopped()
     {
-        return isStopped;   
+        return isStopped;
     }
 
     void OnDrawGizmosSelected()

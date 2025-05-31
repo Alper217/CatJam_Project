@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class StressManager : MonoBehaviour
 {
-    [SerializeField] private float stressLevel = 0f;
+    public float stressLevel = 0f;
+    [SerializeField] private float stressIncreaseRate = 1f; 
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private LayerMask npcLayer;
     [SerializeField] private GameObject buttonPanel;
 
     void Start()
     {
-        //buttonPanel.SetActive(false);
+        buttonPanel.SetActive(false);
     }
     private void OnDrawGizmos()
     {
@@ -34,9 +35,14 @@ public class StressManager : MonoBehaviour
         {
             if (hitCollider.CompareTag("NPC"))
             {
-                //buttonPanel.SetActive(true);
-                Debug.Log("NPC detected" );
+                buttonPanel.SetActive(true);
+                //Debug.Log("NPC detected");
                 return;
+            }
+            else
+            {
+                buttonPanel.SetActive(false);
+                Debug.Log("No NPC detected");
             }
         }
 
@@ -46,8 +52,17 @@ public class StressManager : MonoBehaviour
 
         //if (Physics.Raycast(ray, out RaycastHit hit, maxDistance, npcLayer))
         //{
-        //    //buttonPanel.SetActive(true);
+        //    buttonPanel.SetActive(true);
         //    Debug.Log("Raycast hit");
         //}
+        //else
+        //{
+        //    buttonPanel.SetActive(false);
+        //}
+    }
+
+    public void IncreaseStress()
+    {
+        stressLevel = stressLevel + stressIncreaseRate;
     }
 }

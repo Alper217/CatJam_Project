@@ -29,6 +29,7 @@ public class StressManager : MonoBehaviour
     void Update()
     {
         CheckNPC();
+        IncreaseStress();
     }
 
     public void CheckNPC()
@@ -110,9 +111,12 @@ public class StressManager : MonoBehaviour
     }
 
     public void IncreaseStress()
-    {
-        stressLevel = stressLevel + stressIncreaseRate;
-        Debug.Log($"StresLevel:{stressLevel}");
+    { 
+        if (Input.GetKeyDown(KeyCode.E) && buttonPanel.activeInHierarchy)
+        {
+            stressLevel = stressLevel + stressIncreaseRate;
+            buttonPanel.SetActive(false);
+        }     
     }
 
     void OnDisable()

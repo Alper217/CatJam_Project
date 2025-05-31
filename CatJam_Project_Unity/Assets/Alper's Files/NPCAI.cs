@@ -166,7 +166,7 @@ public class NPCAI : MonoBehaviour
             stuckTimer += Time.deltaTime;
             if (stuckTimer > stuckThreshold)
             {
-                Debug.Log($"{gameObject.name} sýkýþtý, yeni rota bulunuyor...");
+                //Debug.Log($"{gameObject.name} sýkýþtý, yeni rota bulunuyor...");
                 ForceNewDestination();
                 stuckTimer = 0f;
             }
@@ -280,7 +280,7 @@ public class NPCAI : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning($"{gameObject.name} NavMesh'e geri döndürülemedi!");
+                //Debug.LogWarning($"{gameObject.name} NavMesh'e geri döndürülemedi!");
             }
         }
     }
@@ -304,7 +304,7 @@ public class NPCAI : MonoBehaviour
             }
         }
 
-        Debug.LogWarning($"{gameObject.name} için güvenli hedef bulunamadý, alternatif yöntem deneniyor.");
+        //Debug.LogWarning($"{gameObject.name} için güvenli hedef bulunamadý, alternatif yöntem deneniyor.");
         FindAlternativeDestination();
     }
 

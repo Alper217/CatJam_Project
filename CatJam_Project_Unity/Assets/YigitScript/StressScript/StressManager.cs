@@ -117,18 +117,32 @@ public class StressManager : MonoBehaviour
             currentHighlightedNPCs.Clear();
         }
     }
-
+    IEnumerator ResumeNPCAfterDelay(NPCAI npcAI, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        npcAI.ResumeNPC();
+    }
     public void IncreaseStress()
-    { 
+    {
         if (Input.GetKeyDown(KeyCode.E) && interactPanel.activeInHierarchy)
         {
-            stressLevel = stressLevel + stressIncreaseRate;
+            stressLevel += stressIncreaseRate;
+
+            if (currentHighlightedNPCs.Count > 0 && currentHighlightedNPCs[0] != null)
+            {
+                NPCAI npcAI = currentHighlightedNPCs[0].GetComponent<NPCAI>();
+                if (npcAI != null)
+                {
+                    npcAI.StopNPC(); // Hemen durdur
+                    StartCoroutine(ResumeNPCAfterDelay(npcAI, 3f)); // 3 saniye sonra tekrar baþlasýn
+                }
+            }
+
             interactPanel.SetActive(false);
             audioSource.Play();
             StartCoroutine(HideTextPanel());
-        }     
+        }
     }
-
     void OnDisable()
     {
         // Script devre dýþý kaldýðýnda highlight'larý temizle

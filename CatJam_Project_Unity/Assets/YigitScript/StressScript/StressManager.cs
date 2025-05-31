@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class StressManager : MonoBehaviour
 {
+    public static StressManager instance;
     public float stressLevel = 0f;
     [SerializeField] private float stressIncreaseRate = 1f;
     [SerializeField] private float maxDistance = 2f;
@@ -13,7 +14,10 @@ public class StressManager : MonoBehaviour
     public bool isOpen = true;
 
     private List<NPCHighlight> currentHighlightedNPCs = new List<NPCHighlight>();
-
+    private void Awake()
+    {
+        StressManager.instance = this;
+    }
     void Start()
     {
         buttonPanel.SetActive(false);

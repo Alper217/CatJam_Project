@@ -150,14 +150,14 @@ RectTransform:
   m_GameObject: {fileID: 6966988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 0.378855, y: 0.378855, z: 0.378855}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1135568712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -502.8, y: 220.4}
+  m_AnchoredPosition: {x: -361, y: 194}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6966990
@@ -237,6 +237,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &27426963
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -411,14 +413,14 @@ RectTransform:
   m_GameObject: {fileID: 54437442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 0.378855, y: 0.378855, z: 0.378855}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1135568712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -502.8, y: 220.4}
+  m_AnchoredPosition: {x: -361, y: 194}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &54437444
@@ -578,6 +580,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &119828849
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -779,6 +783,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &196847087
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1000,6 +1006,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &260420336
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1186,6 +1194,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &271533021
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1387,6 +1397,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &298991505
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1558,6 +1570,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &325886748
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1759,6 +1773,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &341789829
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2098,14 +2114,14 @@ RectTransform:
   m_GameObject: {fileID: 402005286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.346, y: 0.346, z: 0.346}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1619622837}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 92.77}
+  m_AnchoredPosition: {x: -2, y: -3}
   m_SizeDelta: {x: 319.13, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &402005288
@@ -2338,7 +2354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &420022220
 Transform:
   m_ObjectHideFlags: 0
@@ -2584,6 +2600,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 0.49
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 0}
 --- !u!1 &446607542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,6 +2852,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &481275951
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3235,6 +3255,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &508711372
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3409,14 +3431,14 @@ RectTransform:
   m_GameObject: {fileID: 520804618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5714288, y: 3.5714288, z: 1}
+  m_LocalScale: {x: 2.9715717, y: 2.9715717, z: 0.83204}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1897027993}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.27, y: -11.606827}
+  m_AnchoredPosition: {x: 63, y: -11.606827}
   m_SizeDelta: {x: 290.22, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &520804620
@@ -3555,6 +3577,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &571232932
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3951,6 +3975,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &586848396
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4137,6 +4163,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &590207975
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4323,6 +4351,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &593675519
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4509,6 +4539,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &684012523
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4695,6 +4727,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &719698776
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4881,6 +4915,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &758229941
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5082,6 +5118,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &765626291
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5253,6 +5291,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &766346364
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5427,14 +5467,14 @@ RectTransform:
   m_GameObject: {fileID: 767696713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 0.378855, y: 0.378855, z: 0.378855}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1135568712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -502.8, y: 220.4}
+  m_AnchoredPosition: {x: -361, y: 194}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &767696715
@@ -5563,6 +5603,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &848888897
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5764,6 +5806,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &857258295
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6040,6 +6084,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &921934039
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6187,6 +6233,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b9c3ad731e7854297f36f1ed697fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &950844543 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1086222495006625615, guid: e246619dd742f444b9ed45fbc0c357eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 967685106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &967685106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6343,6 +6395,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &973580291
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6544,6 +6598,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &976550324
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6715,6 +6771,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1021203494
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6994,14 +7052,14 @@ RectTransform:
   m_GameObject: {fileID: 1054089296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 0.378855, y: 0.378855, z: 0.378855}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1135568712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -502.8, y: 220.4}
+  m_AnchoredPosition: {x: -361, y: 194}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054089298
@@ -7116,6 +7174,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1078322380
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7302,6 +7362,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1081082135
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7503,6 +7565,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1083181856
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7674,6 +7738,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1084910022
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7860,6 +7926,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1098147116
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8046,6 +8114,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1106333802
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8232,6 +8302,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1133773071
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8427,7 +8499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -8749,6 +8821,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1337811620
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8935,6 +9009,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1409280419
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9226,6 +9302,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1463776401
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9427,6 +9505,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1509527325
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9841,7 +9921,7 @@ RectTransform:
   m_GameObject: {fileID: 1570675168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.75771, y: 0.75771, z: 0.75771}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 368864311}
@@ -9850,7 +9930,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -328, y: 221.13}
+  m_AnchoredPosition: {x: -272.7, y: 194.36998}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570675170
@@ -10052,6 +10132,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1660459251
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10223,6 +10305,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1665369318
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10409,6 +10493,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1671207585
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10630,6 +10716,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1705143986
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10831,6 +10919,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1710146376
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11107,6 +11197,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1835564544
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11435,7 +11527,7 @@ RectTransform:
   m_GameObject: {fileID: 1897027992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.28, y: 0.28, z: 1}
+  m_LocalScale: {x: 0.22446275, y: 0.22446275, z: 0.8016526}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 520804619}
@@ -11443,7 +11535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.17004395, y: -146.40009}
+  m_AnchoredPosition: {x: 2.7911377, y: -146.60004}
   m_SizeDelta: {x: -0.33996636, y: -292.79984}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897027994
@@ -11628,6 +11720,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1909404660
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11829,6 +11923,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1916630261
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12185,6 +12281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8c308290c6c120f4f904e5c59bd86e85,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8c308290c6c120f4f904e5c59bd86e85,
+        type: 3}
       propertyPath: m_TagString
       value: NPC
       objectReference: {fileID: 0}
@@ -12434,6 +12535,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1943053500
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12793,6 +12896,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1990094070
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12979,6 +13084,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &1998624718
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13270,6 +13377,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &2029017512
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13576,6 +13685,8 @@ MonoBehaviour:
   wanderTimer: 5
   speed: 1.5
   isWandering: 1
+  isStopped: 0
+  characterTransform: {fileID: 950844543}
 --- !u!195 &2071722380
 NavMeshAgent:
   m_ObjectHideFlags: 0

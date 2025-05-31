@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-// Bu scripti her NPC'ye ekleyin
 public class NPCHighlight : MonoBehaviour
 {
     private Renderer[] renderers;
@@ -12,10 +10,8 @@ public class NPCHighlight : MonoBehaviour
 
     void Start()
     {
-        // NPC'nin tüm renderer'larýný al
         renderers = GetComponentsInChildren<Renderer>();
 
-        // Orijinal materyalleri kaydet
         List<Material> origMats = new List<Material>();
         List<Material> highlightMats = new List<Material>();
 

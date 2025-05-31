@@ -37,6 +37,7 @@ public class QTAManager : MonoBehaviour
         if (stressManager.stressLevel >= 8f && i < 3)
         {
             QTAPanel.SetActive(true);
+            stressManager.isOpen = false;
             isActive = true;
         }
         pointerTransform.position = Vector3.MoveTowards(pointerTransform.position, targetPosition, speed * Time.deltaTime);
@@ -60,6 +61,7 @@ public class QTAManager : MonoBehaviour
         if (stressManager.stressLevel <= 5f)
         {
             QTAPanel.SetActive(false);
+            stressManager.isOpen = true;
             isActive = false;
         }
         if (i == 3)

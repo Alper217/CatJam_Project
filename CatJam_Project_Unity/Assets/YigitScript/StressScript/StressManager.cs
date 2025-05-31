@@ -10,17 +10,21 @@ public class StressManager : MonoBehaviour
     [SerializeField] private float stressIncreaseRate = 1f;
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private LayerMask npcLayer;
-    [SerializeField] private GameObject buttonPanel;
+    [SerializeField] private GameObject interactPanel;
+    [SerializeField] private GameObject textPanel;
     public bool isOpen = true;
+    private AudioSource audioSource;
 
     private List<NPCHighlight> currentHighlightedNPCs = new List<NPCHighlight>();
     private void Awake()
     {
         StressManager.instance = this;
+        audioSource = GetComponent<AudioSource>();
     }
     void Start()
     {
-        buttonPanel.SetActive(false);
+        interactPanel.SetActive(false);
+        textPanel.SetActive(false);
     }
 
     private void OnDrawGizmos()
@@ -85,17 +89,17 @@ public class StressManager : MonoBehaviour
             // Panel kontrolü
             if (npcFound)
             {
-                if (!buttonPanel.activeInHierarchy)
+                if (!interactPanel.activeInHierarchy)
                 {
-                    buttonPanel.SetActive(true);
+                    interactPanel.SetActive(true);
                     Debug.Log("NPC detected - Panel açýldý");
                 }
             }
             else
             {
-                if (buttonPanel.activeInHierarchy)
+                if (interactPanel.activeInHierarchy)
                 {
-                    buttonPanel.SetActive(false);
+                    interactPanel.SetActive(false);
                     Debug.Log("No NPC detected - Panel kapatýldý");
                 }
             }
@@ -116,10 +120,12 @@ public class StressManager : MonoBehaviour
 
     public void IncreaseStress()
     { 
-        if (Input.GetKeyDown(KeyCode.E) && buttonPanel.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.E) && interactPanel.activeInHierarchy)
         {
             stressLevel = stressLevel + stressIncreaseRate;
-            buttonPanel.SetActive(false);
+            interactPanel.SetActive(false);
+            audioSource.Play();
+            StartCoroutine(HideTextPanel());
         }     
     }
 
@@ -134,5 +140,12 @@ public class StressManager : MonoBehaviour
             }
         }
         currentHighlightedNPCs.Clear();
+    }
+
+    IEnumerator HideTextPanel()
+    {
+        textPanel.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        textPanel.SetActive(false);
     }
 }

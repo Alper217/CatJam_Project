@@ -15,6 +15,12 @@ public class NPCAI : MonoBehaviour
     private float timer;
     private Vector3 startPosition;
 
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -32,7 +38,7 @@ public class NPCAI : MonoBehaviour
     void Update()
     {
         if (!isWandering || agent == null) return;
-
+        animator.SetBool("isMoving", true);
         timer += Time.deltaTime;
         if (timer >= wanderTimer || !agent.pathPending && agent.remainingDistance < 0.5f)
         {
@@ -80,7 +86,7 @@ public class NPCAI : MonoBehaviour
 
     public void ReturnToStart()
     {
-        GoToPosition(startPosition);
+        GoToPosition(startPosition);   
     }
 
     void OnDrawGizmosSelected()

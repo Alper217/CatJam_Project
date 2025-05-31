@@ -13,6 +13,7 @@ public class StressManager : MonoBehaviour
     public bool isOpen = true;
 
     private List<NPCHighlight> currentHighlightedNPCs = new List<NPCHighlight>();
+    private NPCAI currentSelectedNPC; // Seçili NPC referansý
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class StressManager : MonoBehaviour
     void Update()
     {
         CheckNPC();
-        IncreaseStress();
+        HandleInput();
     }
 
     public void CheckNPC()
@@ -39,6 +40,7 @@ public class StressManager : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, maxDistance, npcLayer);
             bool npcFound = false;
             NPCHighlight closestNPC = null;
+            NPCAI closestNPCAI = null;
             float closestDistance = float.MaxValue;
 
             // En yakýn NPC'yi bul
@@ -53,9 +55,12 @@ public class StressManager : MonoBehaviour
                     {
                         closestDistance = distance;
                         NPCHighlight npcHighlight = hitCollider.GetComponent<NPCHighlight>();
-                        if (npcHighlight != null)
+                        NPCAI npcAI = hitCollider.GetComponent<NPCAI>();
+
+                        if (npcHighlight != null && npcAI != null)
                         {
                             closestNPC = npcHighlight;
+                            closestNPCAI = npcAI;
                         }
                     }
                 }
@@ -76,6 +81,11 @@ public class StressManager : MonoBehaviour
             {
                 closestNPC.SetHighlight(true);
                 currentHighlightedNPCs.Add(closestNPC);
+                currentSelectedNPC = closestNPCAI; // Seçili NPC'yi kaydet
+            }
+            else
+            {
+                currentSelectedNPC = null;
             }
 
             // Panel kontrolü
@@ -107,16 +117,85 @@ public class StressManager : MonoBehaviour
                 }
             }
             currentHighlightedNPCs.Clear();
+            currentSelectedNPC = null;
         }
     }
 
-    public void IncreaseStress()
-    { 
-        if (Input.GetKeyDown(KeyCode.E) && buttonPanel.activeInHierarchy)
+    private void HandleInput()
+    {
+        // E tuþu ile etkileþim
+        if (Input.GetKeyDown(KeyCode.E) && buttonPanel.activeInHierarchy && currentSelectedNPC != null)
         {
-            stressLevel = stressLevel + stressIncreaseRate;
+            InteractWithNPC();
+        }
+
+        // Mouse týklama ile etkileþim (opsiyonel)
+        if (Input.GetMouseButtonDown(0) && currentSelectedNPC != null && buttonPanel.activeInHierarchy)
+        {
+            // Raycast ile NPC'ye týklanýp týklanmadýðýný kontrol et
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, maxDistance, npcLayer))
+            {
+                if (hit.collider.gameObject == currentSelectedNPC.gameObject)
+                {
+                    InteractWithNPC();
+                }
+            }
+        }
+    }
+
+    private void InteractWithNPC()
+    {
+        if (currentSelectedNPC != null)
+        {
+            // NPC'nin hareketini durdur
+            currentSelectedNPC.SetWandering(false);
+
+            // Stress seviyesini artýr
+            stressLevel += stressIncreaseRate;
+            Debug.Log($"NPC durduruldu! Stress Level: {stressLevel}");
+
+            // Panel'i kapat
             buttonPanel.SetActive(false);
-        }     
+
+            // Highlight'ý kaldýr
+            foreach (var npc in currentHighlightedNPCs)
+            {
+                if (npc != null)
+                {
+                    npc.SetHighlight(false);
+                }
+            }
+            currentHighlightedNPCs.Clear();
+
+            // Belirli bir süre sonra NPC'yi tekrar hareket ettir (opsiyonel)
+            StartCoroutine(ResumeNPCMovement(currentSelectedNPC, 3f));
+        }
+    }
+
+    // NPC'yi belirli süre sonra tekrar hareket ettiren coroutine
+    private IEnumerator ResumeNPCMovement(NPCAI npc, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (npc != null)
+        {
+            npc.SetWandering(true);
+            Debug.Log("NPC tekrar hareket ediyor!");
+        }
+    }
+
+    // Manuel olarak NPC'yi yeniden baþlatma fonksiyonu
+    public void ResumeAllNPCs()
+    {
+        NPCAI[] allNPCs = FindObjectsOfType<NPCAI>();
+        foreach (var npc in allNPCs)
+        {
+            npc.SetWandering(true);
+        }
+        Debug.Log("Tüm NPC'ler yeniden baþlatýldý!");
     }
 
     void OnDisable()

@@ -41,7 +41,7 @@ public class StressManager : MonoBehaviour
     void Update()
     {
         CheckNPC();
-        IncreaseStress();
+        
         GameOver();
     }
 
@@ -71,10 +71,28 @@ public class StressManager : MonoBehaviour
                             closestNPC = npcHighlight;
                         }
                     }
+                    IncreaseStress();
                 }
                 if (hitCollider.CompareTag("MOM"))
                 {
-                    //SceneManager.LoadScene(1); // MOM sahnesine ge��iþ yap    
+                    npcFound = true;
+                    float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
+
+                    if (distance < closestDistance)
+                    {
+                        closestDistance = distance;
+                        NPCHighlight npcHighlight = hitCollider.GetComponent<NPCHighlight>();
+                        if (npcHighlight != null)
+                        {
+                            closestNPC = npcHighlight;
+                        }
+                    }
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        SceneManager.LoadScene(1); // MOM sahnesine ge��iþ yap
+                        Debug.Log("MOM detected - Scene changed to MOM scene");
+                    }
+                    
                 }
             }
 

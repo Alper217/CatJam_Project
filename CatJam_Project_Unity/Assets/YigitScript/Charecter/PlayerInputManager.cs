@@ -41,7 +41,7 @@ public class PlayerInputManager : MonoBehaviour
     {
         if (playerInput == null)
         {
-            playerInput = new PlayerInput();            
+            playerInput = new PlayerInput();
             playerInput.PlayerMovement.Move.performed += i => movementInput = i.ReadValue<Vector2>();
             playerInput.PlayerCamera.CameraControls.performed += i => cameraInput = i.ReadValue<Vector2>();
         }

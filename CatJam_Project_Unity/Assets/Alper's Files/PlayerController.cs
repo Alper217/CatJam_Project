@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         // ESC ile cursor'u serbest býrak
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ToggleCursor();
+            //ToggleCursor();
         }
     }
 
@@ -150,14 +150,14 @@ public class PlayerController : MonoBehaviour
         moveDirection = moveDirection.normalized * currentSpeed;
 
         // Yerçekimi etkisi (basit)
-        if (!controller.isGrounded)
-        {
-            velocity.y += Physics.gravity.y * Time.deltaTime;
-        }
-        else
-        {
-            velocity.y = -2f; // Yere yapýþýk kalmasý için
-        }
+        //if (!controller.isGrounded)
+        //{
+        //    velocity.y += Physics.gravity.y * Time.deltaTime;
+        //}
+        //else
+        //{
+        //    velocity.y = -2f; // Yere yapýþýk kalmasý için
+        //}
 
         // Final hareket vektörü
         Vector3 finalMovement = moveDirection + Vector3.up * velocity.y;
@@ -166,19 +166,19 @@ public class PlayerController : MonoBehaviour
         controller.Move(finalMovement * Time.deltaTime);
     }
 
-    void ToggleCursor()
-    {
-        if (Cursor.lockState == CursorLockMode.Locked)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-    }
+    //void ToggleCursor()
+    //{
+    //    if (Cursor.lockState == CursorLockMode.Locked)
+    //    {
+    //        Cursor.lockState = CursorLockMode.None;
+    //        Cursor.visible = true;
+    //    }
+    //    else
+    //    {
+    //        Cursor.lockState = CursorLockMode.Locked;
+    //        Cursor.visible = false;
+    //    }
+    //}
 
     // Public fonksiyonlar - dýþarýdan eriþim için
     public bool IsMoving()

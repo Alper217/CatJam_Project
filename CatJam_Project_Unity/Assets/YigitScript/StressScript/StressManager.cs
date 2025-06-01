@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -54,7 +54,7 @@ public class StressManager : MonoBehaviour
             NPCHighlight closestNPC = null;
             float closestDistance = float.MaxValue;
 
-            // En yakýn NPC'yi bul
+            // En yakÄ±n NPC'yi bul
             foreach (var hitCollider in hitColliders)
             {
                 if (hitCollider.CompareTag("NPC"))
@@ -72,9 +72,13 @@ public class StressManager : MonoBehaviour
                         }
                     }
                 }
+                if (hitCollider.CompareTag("MOM"))
+                {
+                    //SceneManager.LoadScene(1); // MOM sahnesine geï¿½ï¿½iÃ¾ yap    
+                }
             }
 
-            // Eski highlight'larý temizle
+            // Eski highlight'larÄ± temizle
             foreach (var npc in currentHighlightedNPCs)
             {
                 if (npc != null)
@@ -84,20 +88,20 @@ public class StressManager : MonoBehaviour
             }
             currentHighlightedNPCs.Clear();
 
-            // Sadece en yakýn NPC'yi highlight et
+            // Sadece en yakÄ±n NPC'yi highlight et
             if (closestNPC != null)
             {
                 closestNPC.SetHighlight(true);
                 currentHighlightedNPCs.Add(closestNPC);
             }
 
-            // Panel kontrolü
+            // Panel kontrolÃ¼
             if (npcFound)
             {
                 if (!interactPanel.activeInHierarchy)
                 {
                     interactPanel.SetActive(true);
-                    Debug.Log("NPC detected - Panel açýldý");
+                    Debug.Log("NPC detected - Panel aÃ§Ä±ldÄ±");
                 }
             }
             else
@@ -105,13 +109,13 @@ public class StressManager : MonoBehaviour
                 if (interactPanel.activeInHierarchy)
                 {
                     interactPanel.SetActive(false);
-                    Debug.Log("No NPC detected - Panel kapatýldý");
+                    Debug.Log("No NPC detected - Panel kapatÄ±ldÄ±");
                 }
             }
         }
         else
         {
-            // isOpen false ise tüm highlight'larý kaldýr
+            // isOpen false ise tÃ¼m highlight'larÄ± kaldÄ±r
             foreach (var npc in currentHighlightedNPCs)
             {
                 if (npc != null)
@@ -139,7 +143,7 @@ public class StressManager : MonoBehaviour
                 if (npcAI != null)
                 {
                     npcAI.StopNPC(); // Hemen durdur
-                    StartCoroutine(ResumeNPCAfterDelay(npcAI, 3f)); // 3 saniye sonra tekrar baþlasýn
+                    StartCoroutine(ResumeNPCAfterDelay(npcAI, 3f)); // 3 saniye sonra tekrar baÅŸlasÄ±n
                 }
             }
 
@@ -161,7 +165,7 @@ public class StressManager : MonoBehaviour
     }
     void OnDisable()
     {
-        // Script devre dýþý kaldýðýnda highlight'larý temizle
+        // Script devre dÄ±ÅŸÄ± kaldÄ±ÄŸÄ±nda highlight'larÄ± temizle
         foreach (var npc in currentHighlightedNPCs)
         {
             if (npc != null)

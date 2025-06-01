@@ -40,7 +40,7 @@ public class QTAManager : MonoBehaviour
     private void QTAGame()
     {
         // QTA paneli açma koþulu - stress yüksek olduðunda, þu anda aktif deðilse ve cooldown süresi geçmiþse
-        if (stressManager.stressLevel >= 9f && !qtaSessionActive && Time.time - lastQTAEndTime >= qtaCooldown)
+        if (stressManager.stressLevel == 9f && !qtaSessionActive && Time.time - lastQTAEndTime >= qtaCooldown)
         {
             StartQTASession();
         }
@@ -60,7 +60,7 @@ public class QTAManager : MonoBehaviour
             }
 
             // Q tuþuna basma kontrolü
-            if (Input.GetKeyDown(KeyCode.Q) && isActive)
+            if (Input.GetKeyDown(KeyCode.Space) && isActive)
             {
                 CheckSucces();
                 i++;

@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StressManager : MonoBehaviour
 {
     public static StressManager instance;
     public float stressLevel = 0f;
     [SerializeField] private float stressIncreaseRate = 1f;
+    [SerializeField] private float maxStress = 12f;
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private LayerMask npcLayer;
     [SerializeField] private GameObject interactPanel;
     [SerializeField] private GameObject textPanel;
+    [SerializeField] private GameObject gameOverPanel;
     public bool isOpen = true;
     private AudioSource audioSource;
 
@@ -25,6 +28,7 @@ public class StressManager : MonoBehaviour
     {
         interactPanel.SetActive(false);
         textPanel.SetActive(false);
+        gameOverPanel.SetActive(false);
     }
 
     private void OnDrawGizmos()
@@ -38,6 +42,7 @@ public class StressManager : MonoBehaviour
     {
         CheckNPC();
         IncreaseStress();
+        GameOver();
     }
 
     public void CheckNPC()
@@ -142,6 +147,17 @@ public class StressManager : MonoBehaviour
             audioSource.Play();
             StartCoroutine(HideTextPanel());
         }
+    }
+    private void GameOver()
+    {
+        if(stressLevel >= maxStress)
+        {
+            gameOverPanel.SetActive(true);
+        }
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);  
     }
     void OnDisable()
     {

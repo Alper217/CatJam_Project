@@ -15,6 +15,7 @@ public class StressManager : MonoBehaviour
     [SerializeField] private GameObject interactPanel;
     [SerializeField] private GameObject textPanel;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject winPanel;
     public bool isOpen = true;
     private AudioSource audioSource;
 
@@ -29,6 +30,8 @@ public class StressManager : MonoBehaviour
         interactPanel.SetActive(false);
         textPanel.SetActive(false);
         gameOverPanel.SetActive(false);
+        winPanel.SetActive(false);
+
     }
 
     private void OnDrawGizmos()
@@ -89,7 +92,8 @@ public class StressManager : MonoBehaviour
                     }
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        SceneManager.LoadScene(1); // MOM sahnesine ge��iþ yap
+                        StartCoroutine(ShowWinPanel()); // MOM ile etkileşimde bulunulduğunda kazandık
+                        
                         Debug.Log("MOM detected - Scene changed to MOM scene");
                     }
                     
@@ -199,5 +203,12 @@ public class StressManager : MonoBehaviour
         textPanel.SetActive(true);
         yield return new WaitForSeconds(2f);
         textPanel.SetActive(false);
+    }
+    IEnumerator ShowWinPanel()
+    {
+        winPanel.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        winPanel.SetActive(false);
+        SceneManager.LoadScene(1); 
     }
 }

@@ -34,7 +34,7 @@ public class QTAManager : MonoBehaviour
     private void QTAGame()
     {
 
-        if (stressManager.stressLevel >= 8f && i < 3)
+        if (stressManager.stressLevel >= 9f && i < 3)
         {
             QTAPanel.SetActive(true);
             stressManager.isOpen = false;
@@ -53,8 +53,8 @@ public class QTAManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q) && isActive == true)
         {
-            CheckSucces();
             i++;
+            CheckSucces();    
             Debug.Log("Q pressed! Current count: " + i);
         }
 

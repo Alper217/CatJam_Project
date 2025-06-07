@@ -38,7 +38,6 @@ public class StressManager : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, maxDistance);
-        Gizmos.DrawLine(transform.position, transform.position + transform.forward * maxDistance);
     }
 
     void Update()
@@ -92,8 +91,9 @@ public class StressManager : MonoBehaviour
                     }
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        StartCoroutine(ShowWinPanel()); // MOM ile etkileşimde bulunulduğunda kazandık
-                        
+                        winPanel.SetActive(true);
+                        Time.timeScale = 0f; // Oyun durdurulsun
+
                         Debug.Log("MOM detected - Scene changed to MOM scene");
                     }
                     
@@ -203,12 +203,5 @@ public class StressManager : MonoBehaviour
         textPanel.SetActive(true);
         yield return new WaitForSeconds(2f);
         textPanel.SetActive(false);
-    }
-    IEnumerator ShowWinPanel()
-    {
-        winPanel.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        winPanel.SetActive(false);
-        SceneManager.LoadScene(1); 
     }
 }

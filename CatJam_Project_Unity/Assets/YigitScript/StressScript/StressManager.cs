@@ -94,7 +94,7 @@ public class StressManager : MonoBehaviour
                         winPanel.SetActive(true);
                         Time.timeScale = 0f; // Oyun durdurulsun
 
-                        Debug.Log("MOM detected - Scene changed to MOM scene");
+                        //Debug.Log("MOM detected - Scene changed to MOM scene");
                     }
                     
                 }
@@ -123,7 +123,7 @@ public class StressManager : MonoBehaviour
                 if (!interactPanel.activeInHierarchy)
                 {
                     interactPanel.SetActive(true);
-                    Debug.Log("NPC detected - Panel açıldı");
+                    //Debug.Log("NPC detected - Panel açıldı");
                 }
             }
             else
@@ -131,7 +131,7 @@ public class StressManager : MonoBehaviour
                 if (interactPanel.activeInHierarchy)
                 {
                     interactPanel.SetActive(false);
-                    Debug.Log("No NPC detected - Panel kapatıldı");
+                    //Debug.Log("No NPC detected - Panel kapatıldı");
                 }
             }
         }

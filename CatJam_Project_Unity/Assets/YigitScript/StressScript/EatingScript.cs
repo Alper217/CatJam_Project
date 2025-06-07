@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class EatingScript : MonoBehaviour
 {
+    public static EatingScript instance;
     [SerializeField]private float stressDecreaseRate = 2f;
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private LayerMask foodLayer;
@@ -22,6 +23,7 @@ public class EatingScript : MonoBehaviour
 
     private void Awake()
     {
+        EatingScript.instance = this;
         stressManager = FindObjectOfType<StressManager>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -51,7 +53,6 @@ public class EatingScript : MonoBehaviour
             NPCHighlight closestFood = null;
             float closestDistance = float.MaxValue;
 
-            // En yakýn NPC'yi bul
             foreach (var hitCollider in hitColliders)
             {
                 if (hitCollider.CompareTag("Food"))
@@ -95,7 +96,7 @@ public class EatingScript : MonoBehaviour
                 if (!interactPanel.activeInHierarchy)
                 {
                     interactPanel.SetActive(true);
-                    Debug.Log("NPC detected - Panel açýldý");
+                    //Debug.Log("NPC detected - Panel açýldý");
                 }
             }
             else
@@ -103,7 +104,7 @@ public class EatingScript : MonoBehaviour
                 if (interactPanel.activeInHierarchy)
                 {
                     interactPanel.SetActive(false);
-                    Debug.Log("No NPC detected - Panel kapatýldý");
+                    //Debug.Log("No NPC detected - Panel kapatýldý");
                 }
             }
         }
@@ -122,7 +123,9 @@ public class EatingScript : MonoBehaviour
     }
     IEnumerator Eating()
     {
+        Debug.Log("Eating started!");
         textPanel.SetActive(true);
+        interactPanel.SetActive(false); 
         isEating = true;
         yield return new WaitForSeconds(2f);
         isEating = false;
@@ -133,23 +136,20 @@ public class EatingScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && interactPanel.activeInHierarchy)
         {
-            if (stressManager.stressLevel >= 0)
-            {
-                stressManager.stressLevel -= stressDecreaseRate; // Stresi azalt
-            }
+            stressManager.stressLevel -= stressDecreaseRate; // Stresi azalt
             if(stressManager.stressLevel < 0)
             {
                 stressManager.stressLevel = 0; // Stres seviyesi negatif olamaz
             }
-            if (isEating)
+            if (isEating == true)
             {
                 Debug.Log("Already eating!");
                 return;
             }
             if (currentHighlightedFoods.Count > 0 && currentHighlightedFoods[0] != null)
             {
-                NPCAI npcAI = currentHighlightedFoods[0].GetComponent<NPCAI>();
-                if (npcAI != null)
+                NPCHighlight higlight = currentHighlightedFoods[0].GetComponent<NPCHighlight>();
+                if (higlight != null)
                 {
                     StartCoroutine(Eating()); 
                 }

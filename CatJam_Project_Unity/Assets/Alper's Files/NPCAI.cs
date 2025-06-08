@@ -27,7 +27,7 @@ public class NPCAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         if (agent == null)
         {
-            Debug.LogError("NavMeshAgent component bulunamadý!");
+            //Debug.LogError("NavMeshAgent component bulunamadý!");
             return;
         }
         agent.speed = speed;
@@ -93,7 +93,7 @@ public class NPCAI : MonoBehaviour
             agent.ResetPath();
             agent.isStopped = true;
             UpdateAnimation(false); // Idle animasyon
-            Debug.Log($"{gameObject.name} durduruldu!");
+            //Debug.Log($"{gameObject.name} durduruldu!");
             if (characterTransform != null)
             {
                 Vector3 direction = (characterTransform.position - transform.position).normalized;
@@ -105,7 +105,7 @@ public class NPCAI : MonoBehaviour
         else
         {
             agent.isStopped = false;
-            Debug.Log($"{gameObject.name} tekrar hareket ediyor!");
+            //Debug.Log($"{gameObject.name} tekrar hareket ediyor!");
         }
     }
     public void StopNPC()

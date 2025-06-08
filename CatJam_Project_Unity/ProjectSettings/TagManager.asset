@@ -8,6 +8,8 @@ TagManager:
   - Shelf
   - restart
   - MOM
+  - Food
+  - Staff
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - UI
   - NPC
   - Post Processing
-  - 
-  - 
+  - Food
+  - Player
   - 
   - 
   - 

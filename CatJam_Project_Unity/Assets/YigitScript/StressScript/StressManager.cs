@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class StressManager : MonoBehaviour
 {
     public static StressManager instance;
+    MotherSpawn motherSpawn;
     public float stressLevel = 0f;
     [SerializeField] private float stressIncreaseRate = 1f;
     [SerializeField] private float maxStress = 12f;
@@ -23,6 +24,7 @@ public class StressManager : MonoBehaviour
     private void Awake()
     {
         StressManager.instance = this;
+        motherSpawn = FindObjectOfType<MotherSpawn>();
         audioSource = GetComponent<AudioSource>();
     }
     void Start()
@@ -38,7 +40,6 @@ public class StressManager : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, maxDistance);
-        Gizmos.DrawLine(transform.position, transform.position + transform.forward * maxDistance);
     }
 
     void Update()
@@ -92,11 +93,31 @@ public class StressManager : MonoBehaviour
                     }
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        StartCoroutine(ShowWinPanel()); // MOM ile etkileşimde bulunulduğunda kazandık
-                        
-                        Debug.Log("MOM detected - Scene changed to MOM scene");
+                        winPanel.SetActive(true);
+                        Time.timeScale = 0f; // Oyun durdurulsun
+
+                        //Debug.Log("MOM detected - Scene changed to MOM scene");
                     }
                     
+                }
+                if(hitCollider.CompareTag("Staff"))
+                {
+                    npcFound = true;
+                    float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
+                    if (distance < closestDistance)
+                    {
+                        closestDistance = distance;
+                        NPCHighlight npcHighlight = hitCollider.GetComponent<NPCHighlight>();
+                        if (npcHighlight != null)
+                        {
+                            closestNPC = npcHighlight;
+                        }
+
+                    }
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        motherSpawn.MotherClue(); 
+                    }
                 }
             }
 
@@ -123,7 +144,7 @@ public class StressManager : MonoBehaviour
                 if (!interactPanel.activeInHierarchy)
                 {
                     interactPanel.SetActive(true);
-                    Debug.Log("NPC detected - Panel açıldı");
+                    //Debug.Log("NPC detected - Panel açıldı");
                 }
             }
             else
@@ -131,7 +152,7 @@ public class StressManager : MonoBehaviour
                 if (interactPanel.activeInHierarchy)
                 {
                     interactPanel.SetActive(false);
-                    Debug.Log("No NPC detected - Panel kapatıldı");
+                    //Debug.Log("No NPC detected - Panel kapatıldı");
                 }
             }
         }
@@ -203,12 +224,5 @@ public class StressManager : MonoBehaviour
         textPanel.SetActive(true);
         yield return new WaitForSeconds(2f);
         textPanel.SetActive(false);
-    }
-    IEnumerator ShowWinPanel()
-    {
-        winPanel.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        winPanel.SetActive(false);
-        SceneManager.LoadScene(1); 
     }
 }

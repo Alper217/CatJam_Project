@@ -17,7 +17,7 @@ public class MotherSpawn : MonoBehaviour
         {
             motherIndex = Random.Range(0, mothers.Count);
             mothers[motherIndex].tag = "MOM";
-            //Debug.Log(motherIndex);
+            Debug.Log(motherIndex);
         }
         else
         {

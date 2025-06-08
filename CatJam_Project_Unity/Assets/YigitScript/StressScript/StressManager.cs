@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class StressManager : MonoBehaviour
 {
     public static StressManager instance;
+    MotherSpawn motherSpawn;
     public float stressLevel = 0f;
     [SerializeField] private float stressIncreaseRate = 1f;
     [SerializeField] private float maxStress = 12f;
@@ -23,6 +24,7 @@ public class StressManager : MonoBehaviour
     private void Awake()
     {
         StressManager.instance = this;
+        motherSpawn = FindObjectOfType<MotherSpawn>();
         audioSource = GetComponent<AudioSource>();
     }
     void Start()
@@ -97,6 +99,25 @@ public class StressManager : MonoBehaviour
                         //Debug.Log("MOM detected - Scene changed to MOM scene");
                     }
                     
+                }
+                if(hitCollider.CompareTag("Staff"))
+                {
+                    npcFound = true;
+                    float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
+                    if (distance < closestDistance)
+                    {
+                        closestDistance = distance;
+                        NPCHighlight npcHighlight = hitCollider.GetComponent<NPCHighlight>();
+                        if (npcHighlight != null)
+                        {
+                            closestNPC = npcHighlight;
+                        }
+
+                    }
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        motherSpawn.MotherClue(); 
+                    }
                 }
             }
 

@@ -46,11 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stressLevel: 7
   stressIncreaseRate: 1
+  maxStress: 12
   maxDistance: 1.5
   npcLayer:
     serializedVersion: 2
     m_Bits: 64
-  buttonPanel: {fileID: 0}
+  interactPanel: {fileID: 0}
+  textPanel: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  winPanel: {fileID: 0}
   isOpen: 1
 --- !u!1 &8625102260597969769
 GameObject:
@@ -65,8 +69,6 @@ GameObject:
   - component: {fileID: 6131828329447673467}
   - component: {fileID: 981695133516260280}
   - component: {fileID: 6806285560087757060}
-  - component: {fileID: 2917689463920585487}
-  - component: {fileID: 2678289262132804260}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -188,37 +190,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2917689463920585487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625102260597969769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c05b7ac85dd3c994f87b86011b1ad235, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterController: {fileID: 0}
---- !u!114 &2678289262132804260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625102260597969769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bca4d0d63742214d8d17fe32935efa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkingSpeed: 2
-  runningSpeed: 5
-  rotationSpeed: 15
-  verticalMovement: 0
-  horizontalMovement: 0
-  moveAmount: 0
 --- !u!1001 &2895649525994529447
 PrefabInstance:
   m_ObjectHideFlags: 0

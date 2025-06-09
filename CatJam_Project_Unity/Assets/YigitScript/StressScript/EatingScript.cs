@@ -10,8 +10,8 @@ public class EatingScript : MonoBehaviour
     [SerializeField]private float stressDecreaseRate = 2f;
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private LayerMask foodLayer;
-    [SerializeField] private GameObject interactPanel;
-    [SerializeField] private GameObject textPanel;
+    //[SerializeField] private GameObject interactPanel;
+    //[SerializeField] private GameObject textPanel;
     public bool isEating = false;
     public bool isOpen = true;
     private AudioSource audioSource;
@@ -29,8 +29,8 @@ public class EatingScript : MonoBehaviour
     }
     void Start()
     {
-        interactPanel.SetActive(false);
-        textPanel.SetActive(false);
+        //interactPanel.SetActive(false);
+        //textPanel.SetActive(false);
     }
 
     private void OnDrawGizmos()
@@ -91,22 +91,22 @@ public class EatingScript : MonoBehaviour
             }
 
             // Panel kontrolü
-            if (foodFound)
-            {
-                if (!interactPanel.activeInHierarchy)
-                {
-                    interactPanel.SetActive(true);
-                    //Debug.Log("NPC detected - Panel açýldý");
-                }
-            }
-            else
-            {
-                if (interactPanel.activeInHierarchy)
-                {
-                    interactPanel.SetActive(false);
-                    //Debug.Log("No NPC detected - Panel kapatýldý");
-                }
-            }
+            //if (foodFound)
+            //{
+            //    if (!interactPanel.activeInHierarchy)
+            //    {
+            //        interactPanel.SetActive(true);
+            //        //Debug.Log("NPC detected - Panel açýldý");
+            //    }
+            //}
+            //else
+            //{
+            //    if (interactPanel.activeInHierarchy)
+            //    {
+            //        interactPanel.SetActive(false);
+            //        //Debug.Log("No NPC detected - Panel kapatýldý");
+            //    }
+            //}
         }
         else
         {
@@ -124,17 +124,17 @@ public class EatingScript : MonoBehaviour
     IEnumerator Eating()
     {
         Debug.Log("Eating started!");
-        textPanel.SetActive(true);
-        interactPanel.SetActive(false); 
+        //textPanel.SetActive(true);
+        //interactPanel.SetActive(false); 
         isEating = true;
         yield return new WaitForSeconds(2f);
         isEating = false;
-        textPanel.SetActive(false);
+        //textPanel.SetActive(false);
         Destroy(currentHighlightedFoods[0].gameObject); // Yemeði yok et
     }
     public void EatFood()
     {
-        if (Input.GetKeyDown(KeyCode.E) && interactPanel.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             stressManager.stressLevel -= stressDecreaseRate; // Stresi azalt
             if(stressManager.stressLevel < 0)
@@ -155,7 +155,7 @@ public class EatingScript : MonoBehaviour
                 }
             }
 
-            interactPanel.SetActive(false);
+            //interactPanel.SetActive(false);
             //audioSource.Play();
         }
     }

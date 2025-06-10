@@ -5,9 +5,9 @@ using UnityEngine;
 public class SecurityScript : MonoBehaviour
 {
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private float detectionRadius = 5f; // Security camera detection radius
+    [SerializeField] private float detectionRadius = 5f;
+    [SerializeField] private GameObject gameOverPanel;
     EatingScript eatingScript;
-    bool playerDetected = false;
     void Start()
     {
         eatingScript = FindObjectOfType<EatingScript>();
@@ -25,7 +25,7 @@ public class SecurityScript : MonoBehaviour
         {
             if (hitCollider.CompareTag("Player") && eatingScript.isEating == true)
             {
-                playerDetected = true;
+                gameOverPanel.SetActive(true);
                 Debug.Log("Player detected by security camera");
                 break;
             }

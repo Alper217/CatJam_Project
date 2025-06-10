@@ -17,8 +17,8 @@ public class MoraleController : MonoBehaviour
         slider.value -= 1f*Time.deltaTime;
         playerController.canRun = slider.value > 75;
        if (slider.value <= 50 )
-        {
+       {
             playerController.walkSpeed = 2.5f;
-        }
+       }
     }
 }

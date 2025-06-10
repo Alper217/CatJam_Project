@@ -100,25 +100,7 @@ public class StressManager : MonoBehaviour
                     }
                     
                 }
-                if(hitCollider.CompareTag("Staff"))
-                {
-                    npcFound = true;
-                    float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
-                    if (distance < closestDistance)
-                    {
-                        closestDistance = distance;
-                        NPCHighlight npcHighlight = hitCollider.GetComponent<NPCHighlight>();
-                        if (npcHighlight != null)
-                        {
-                            closestNPC = npcHighlight;
-                        }
-
-                    }
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        motherSpawn.MotherClue(); 
-                    }
-                }
+                
             }
 
             // Eski highlight'ları temizle
@@ -199,6 +181,7 @@ public class StressManager : MonoBehaviour
     {
         if(stressLevel >= maxStress)
         {
+            Debug.Log("Game Over - Stress Level exceeded");
             gameOverPanel.SetActive(true);
         }
     }

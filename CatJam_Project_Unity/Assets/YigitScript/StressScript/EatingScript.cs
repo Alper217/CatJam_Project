@@ -7,10 +7,9 @@ using UnityEngine.UI;
 public class EatingScript : MonoBehaviour
 {
     public static EatingScript instance;
-    [SerializeField]private float stressDecreaseRate = 2f;
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private LayerMask foodLayer;
-    //[SerializeField] private GameObject interactPanel;
+    [SerializeField] private GameObject interactPanel;
     //[SerializeField] private GameObject textPanel;
     public bool isEating = false;
     public bool isOpen = true;
@@ -19,7 +18,7 @@ public class EatingScript : MonoBehaviour
     StressManager stressManager;
     MoraleController moraleController;
     private List<NPCHighlight> currentHighlightedFoods = new List<NPCHighlight>();
-    
+
 
     private void Awake()
     {
@@ -91,23 +90,23 @@ public class EatingScript : MonoBehaviour
                 currentHighlightedFoods.Add(closestFood);
             }
 
-            // Panel kontrolü
-            //if (foodFound)
-            //{
-            //    if (!interactPanel.activeInHierarchy)
-            //    {
-            //        interactPanel.SetActive(true);
-            //        //Debug.Log("NPC detected - Panel açýldý");
-            //    }
-            //}
-            //else
-            //{
-            //    if (interactPanel.activeInHierarchy)
-            //    {
-            //        interactPanel.SetActive(false);
-            //        //Debug.Log("No NPC detected - Panel kapatýldý");
-            //    }
-            //}
+            //Panel kontrolü
+            if (foodFound)
+            {
+                if (!interactPanel.activeInHierarchy)
+                {
+                    interactPanel.SetActive(true);
+                    //Debug.Log("NPC detected - Panel açýldý");
+                }
+            }
+            else
+            {
+                if (interactPanel.activeInHierarchy)
+                {
+                    interactPanel.SetActive(false);
+                    //Debug.Log("No NPC detected - Panel kapatýldý");
+                }
+            }
         }
         else
         {
@@ -126,7 +125,7 @@ public class EatingScript : MonoBehaviour
     {
         Debug.Log("Eating started!");
         //textPanel.SetActive(true);
-        //interactPanel.SetActive(false); 
+        interactPanel.SetActive(false); 
         isEating = true;
         yield return new WaitForSeconds(2f);
         isEating = false;
@@ -138,10 +137,10 @@ public class EatingScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            stressManager.stressLevel -= stressDecreaseRate; // Stress Azalt/Arttýr BURAYI KONTROL ET YIGIT
-            if(stressManager.stressLevel < 0)
+            stressManager.stressLevel += stressManager.stressLevel + 1; // Stress Azalt/Arttýr BURAYI KONTROL ET YIGIT
+            if (stressManager.stressLevel >= 12)
             {
-                stressManager.stressLevel = 0; // Stres seviyesi negatif olamaz
+                stressManager.stressLevel = 12; // Stres seviyesi negatif olamaz
             }
             if (isEating == true)
             {
@@ -153,7 +152,7 @@ public class EatingScript : MonoBehaviour
                 NPCHighlight higlight = currentHighlightedFoods[0].GetComponent<NPCHighlight>();
                 if (higlight != null)
                 {
-                    StartCoroutine(Eating()); 
+                    StartCoroutine(Eating());
                 }
             }
 
@@ -161,7 +160,7 @@ public class EatingScript : MonoBehaviour
             //audioSource.Play();
         }
     }
-   
+
     void OnDisable()
     {
         // Script devre dýþý kaldýðýnda highlight'larý temizle

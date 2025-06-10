@@ -24,7 +24,7 @@ public class StaffScript : MonoBehaviour
         {
             if (hitCollider.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("ipucu");
+                mother.MotherClue();
                 break;
             }
         }

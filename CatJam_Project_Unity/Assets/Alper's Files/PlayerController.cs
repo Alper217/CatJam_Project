@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
         // Mouse cursor'unu kilitle
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.visible = false;
 
         // Baþlangýç rotasyonunu kaydet
         yRotation = transform.eulerAngles.y;

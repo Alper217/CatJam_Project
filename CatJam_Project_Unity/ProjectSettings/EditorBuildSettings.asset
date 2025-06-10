@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Rab.unity
-    guid: 1b1be0ae502b0974291fb133983ce74a
+    path: Assets/Scenes/ui deneme.unity
+    guid: 8beb90985de9cf64f9bcea81f2e28d8f
+  - enabled: 1
+    path: Assets/Scenes/yigitayarlama.unity
+    guid: d563f946f1a03a644a6522c4c0029c00
   m_configObjects: {}

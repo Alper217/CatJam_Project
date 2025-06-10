@@ -208,7 +208,7 @@ public class StressManager : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(0);  
+        SceneManager.LoadScene(1);  
     }
     void OnDisable()
     {

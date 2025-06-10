@@ -17,7 +17,7 @@ public class EatingScript : MonoBehaviour
     private AudioSource audioSource;
 
     StressManager stressManager;
-
+    MoraleController moraleController;
     private List<NPCHighlight> currentHighlightedFoods = new List<NPCHighlight>();
     
 
@@ -25,6 +25,7 @@ public class EatingScript : MonoBehaviour
     {
         EatingScript.instance = this;
         stressManager = FindObjectOfType<StressManager>();
+        moraleController = FindObjectOfType<MoraleController>();
         audioSource = GetComponent<AudioSource>();
     }
     void Start()
@@ -130,13 +131,14 @@ public class EatingScript : MonoBehaviour
         yield return new WaitForSeconds(2f);
         isEating = false;
         //textPanel.SetActive(false);
-        Destroy(currentHighlightedFoods[0].gameObject); // Yemeði yok et
+        moraleController.slider.value += 10f;
+        Destroy(currentHighlightedFoods[0].gameObject); // Yemeði yok et     
     }
     public void EatFood()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            stressManager.stressLevel -= stressDecreaseRate; // Stresi azalt
+            stressManager.stressLevel -= stressDecreaseRate; // Stress Azalt/Arttýr BURAYI KONTROL ET YIGIT
             if(stressManager.stressLevel < 0)
             {
                 stressManager.stressLevel = 0; // Stres seviyesi negatif olamaz

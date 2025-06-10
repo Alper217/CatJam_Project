@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SliderController : MonoBehaviour
 {
     [SerializeField] StressManager stressManager;
-    [SerializeField] private Slider slider;
+    [SerializeField] public Slider slider;
     [SerializeField] private GameObject goodFace;
     [SerializeField] private GameObject normalFace;
     [SerializeField] private GameObject badFace;

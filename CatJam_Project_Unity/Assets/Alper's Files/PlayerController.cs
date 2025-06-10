@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     private float vertical;
     private bool isRunning;
+    public bool canRun;
 
     void Start()
     {
@@ -126,9 +127,9 @@ public class PlayerController : MonoBehaviour
     void HandleMovement()
     {
         // Hedef hýzý belirle
-        if (horizontal != 0 || vertical != 0)
+        if ((horizontal != 0 || vertical != 0))
         {
-            targetSpeed = isRunning ? runSpeed : walkSpeed;
+            targetSpeed = (isRunning && canRun) ? runSpeed : walkSpeed;
         }
         else
         {

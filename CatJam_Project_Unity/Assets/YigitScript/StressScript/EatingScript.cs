@@ -127,6 +127,7 @@ public class EatingScript : MonoBehaviour
         //textPanel.SetActive(true);
         interactPanel.SetActive(false); 
         isEating = true;
+        stressManager.stressLevel += 1;
         yield return new WaitForSeconds(2f);
         isEating = false;
         //textPanel.SetActive(false);
@@ -137,17 +138,18 @@ public class EatingScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            stressManager.stressLevel += stressManager.stressLevel + 1; // Stress Azalt/Arttýr BURAYI KONTROL ET YIGIT
+            
+            Debug.Log("Stress level increased: " + stressManager.stressLevel);
             if (stressManager.stressLevel >= 12)
             {
-                stressManager.stressLevel = 12; // Stres seviyesi negatif olamaz
+                stressManager.stressLevel = 12; 
             }
             if (isEating == true)
             {
                 Debug.Log("Already eating!");
                 return;
             }
-            if (currentHighlightedFoods.Count > 0 && currentHighlightedFoods[0] != null)
+            if (currentHighlightedFoods.Count > 0 && currentHighlightedFoods[0] != null && isEating == false)
             {
                 NPCHighlight higlight = currentHighlightedFoods[0].GetComponent<NPCHighlight>();
                 if (higlight != null)
@@ -156,8 +158,7 @@ public class EatingScript : MonoBehaviour
                 }
             }
 
-            //interactPanel.SetActive(false);
-            //audioSource.Play();
+            
         }
     }
 

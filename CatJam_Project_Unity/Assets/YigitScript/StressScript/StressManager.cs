@@ -201,6 +201,8 @@ public class StressManager : MonoBehaviour
         if(stressLevel >= maxStress)
         {
             Debug.Log("Game Over - Stress Level exceeded");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             gameOverPanel.SetActive(true);
         }
     }

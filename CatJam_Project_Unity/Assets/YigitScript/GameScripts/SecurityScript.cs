@@ -25,7 +25,9 @@ public class SecurityScript : MonoBehaviour
         {
             if (hitCollider.CompareTag("Player") && eatingScript.isEating == true)
             {
-               // gameOverPanel.SetActive(true);
+                gameOverPanel.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 Debug.Log("Player detected by security camera");
                 break;
             }
